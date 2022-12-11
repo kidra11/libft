@@ -6,7 +6,7 @@
 /*   By: marvin <shiro@student.42.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 17:40:49 by marvin            #+#    #+#             */
-/*   Updated: 2022/12/07 17:45:50 by marvin           ###   ########.fr       */
+/*   Updated: 2022/12/11 22:45:45 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,4 +14,14 @@
 
 void	*ft_memset(void *b, int c, size_t len)
 {
+	char	*unb;
+
+	unb = b;
+	while (len > 0)
+	{
+		*unb = c;
+		unb++;
+		len--;
+	}
+	return (b);
 }
