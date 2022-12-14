@@ -1,27 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <shiro@student.42.fr>               +#+  +:+       +#+        */
+/*   By: nsion <nsion@student.42perpignan.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/07 17:40:49 by marvin            #+#    #+#             */
-/*   Updated: 2022/12/14 14:44:46 by nsion            ###   ########.fr       */
+/*   Created: 2022/12/14 14:41:13 by nsion             #+#    #+#             */
+/*   Updated: 2022/12/14 14:56:44 by nsion            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *b, int c, size_t len)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	char	*unb;
-
-	unb = b;
-	while (len > 0)
-	{
-		*unb = c;
-		unb++;
-		len--;
-	}
-	return (b);
 }
