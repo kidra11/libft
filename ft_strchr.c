@@ -5,24 +5,24 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nsion <nsion@student.42perpignan.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/07 11:19:28 by nsion             #+#    #+#             */
-/*   Updated: 2023/01/07 11:54:09 by nsion            ###   ########.fr       */
+/*   Created: 2023/01/07 14:10:08 by nsion             #+#    #+#             */
+/*   Updated: 2023/01/07 17:06:52 by nsion            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "libft.h"
 
-char	*strchr(const char*s, int c)
+char	*ft_strchr(const char *s, int c)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
+	if ((char)c == 0)
+		return ((char *)s + ft_strlen((char *)s));
 	while (s[i])
 	{
-		if (c == s[i])
-		{
-			return ((char *)s[i]);
-		}
+		if ((char)c == s[i])
+			return ((char *)s + i);
 		i++;
 	}
 	return (0);
