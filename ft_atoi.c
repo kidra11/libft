@@ -1,29 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nsion <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/01 14:57:37 by nsion             #+#    #+#             */
-/*   Updated: 2023/02/01 15:03:31 by nsion            ###   ########.fr       */
+/*   Created: 2023/02/03 11:16:15 by nsion             #+#    #+#             */
+/*   Updated: 2023/02/03 11:37:00 by nsion            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+int	ft_atoi(const char *nptr)
 {
-	int	i;
+	size_t	i;
+	size_t	k;
+	size_t	nb;
 
-	if (!dest && !src)
-		return (0);
 	i = 0;
-	while (n > 0)
+	nb = 0;
+	k = 1;
+	if (nptr[i] == '+' || nptr[i] == '-')
 	{
-		((char *)dest)[i] = ((char *)src)[i];
+		k *= -1;
 		i++;
-		n--;
 	}
-	return (dest);
+	while (nptr[i] >= 48 && nptr[i] <= 57)
+	{
+		nb = nb * 10 + nptr[i] - 48;
+		i++;
+	}
+	return (nb * k);
 }

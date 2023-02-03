@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nsion <nsion@student.42perpignan.fr>       +#+  +:+       +#+        */
+/*   By: nsion <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/02 19:07:04 by nsion             #+#    #+#             */
-/*   Updated: 2023/01/02 19:21:37 by nsion            ###   ########.fr       */
+/*   Created: 2023/02/01 19:46:26 by nsion             #+#    #+#             */
+/*   Updated: 2023/02/01 19:47:53 by nsion            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "libft.h"
 
 int	ft_toupper(int c)
 {

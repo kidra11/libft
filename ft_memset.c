@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <shiro@student.42.fr>               +#+  +:+       +#+        */
+/*   By: nsion <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/07 17:40:49 by marvin            #+#    #+#             */
-/*   Updated: 2023/01/03 11:43:57 by nsion            ###   ########.fr       */
+/*   Created: 2023/02/01 15:17:33 by nsion             #+#    #+#             */
+/*   Updated: 2023/02/01 15:20:02 by nsion            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *b, int c, size_t len)
+void	*ft_memset(void *b, int *c, size_t len)
 {
 	char	*unb;
 

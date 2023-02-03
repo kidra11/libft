@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nsion <nsion@student.42perpignan.fr>       +#+  +:+       +#+        */
+/*   By: nsion <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/02 19:22:39 by nsion             #+#    #+#             */
-/*   Updated: 2023/01/02 19:26:02 by nsion            ###   ########.fr       */
+/*   Created: 2023/02/01 15:50:32 by nsion             #+#    #+#             */
+/*   Updated: 2023/02/01 16:37:58 by nsion            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "libft.h"
 
 int	ft_tolower(int c)
 {

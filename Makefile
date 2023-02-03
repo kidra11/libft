@@ -3,22 +3,22 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: marvin <shiro@student.42.fr>               +#+  +:+       +#+         #
+#    By: nsion <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/12/07 16:10:09 by marvin            #+#    #+#              #
-#    Updated: 2023/01/07 14:05:33 by nsion            ###   ########.fr        #
+#    Created: 2023/02/01 19:23:02 by nsion             #+#    #+#              #
+#    Updated: 2023/02/01 19:44:11 by nsion            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS	= ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c ft_strlcat.c ft_strlen.c ft_strlcpy.c ft_toupper.c ft_tolower.c ft_strchr.c
+SRCS	= ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_strlen.c ft_memset.c ft_bzero.c ft_memcoy.c ft_memmove.c ft_strlcpy.c ft_strlcat.c ft_toupper.c ft_tolower.c ft_strchr.c ft_strrchr.c ft_strncmp.c ft_memchr.c ft_memcmp.c ft_strnstr.c ft_atoi.c
 
-NAME	= libft.a
+Name	= libft.a
 
 CC	= gcc
 
-CFLAGS	= -Wall -Wextra -Werror
+CFLAGS	= -Wall -Werror -Wextra
 
-RM = rm -f
+RM	= rm -f
 
 OBJS	= $(SRCS:.c=.o)
 
@@ -27,13 +27,10 @@ all: ${NAME}
 .c.o	:
 	${CC} -I. -o $@ -c $? ${CFLAGS}
 
-${NAME} : ${OBJS}
+${NAME}	: $${OBJS}
 	ar rc ${NAME} ${OBJS}
 
-clean :
-	${RM} ${OBJS}
-
-fclean : clean
+clean	:
 	${RM} ${NAME}
 
-re : fclean all
+re	: fclean all
