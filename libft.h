@@ -6,7 +6,7 @@
 /*   By: nsion <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 19:48:11 by nsion             #+#    #+#             */
-/*   Updated: 2023/02/03 14:56:40 by nsion            ###   ########.fr       */
+/*   Updated: 2023/02/05 15:04:46 by nsion            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,8 @@ char	*ft_strrchr(const char *s, int c);
 
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 
+char	*ft_strdup(const char *s);
+
 void	*ft_memset(void *b, int c, size_t len);
 
 void	ft_bzero(void *s, size_t n);
@@ -54,10 +56,16 @@ void	*ft_memmove(void *dest, const void *src, size_t n);
 
 void	*ft_memchr(const void *s, int c, size_t n);
 
+void	*ft_calloc(size_t nmemb, size_t size);
+
 size_t	ft_strlen(const char *s);
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
+
+//parti2
+
+char	*ft_substr(char const *s, unsigned int start, size_t len);
 
 #endif
