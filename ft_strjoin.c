@@ -6,7 +6,7 @@
 /*   By: nsion <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 17:53:51 by nsion             #+#    #+#             */
-/*   Updated: 2023/02/06 19:37:14 by nsion            ###   ########.fr       */
+/*   Updated: 2023/02/07 12:07:25 by nsion            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	char	*str;
 	int		l;
 	int		i;
+	int		k;
 
 	i = 0;
 	l = ft_strlen(s1);
