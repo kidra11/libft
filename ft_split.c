@@ -6,7 +6,7 @@
 /*   By: nsion <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 17:05:17 by nsion             #+#    #+#             */
-/*   Updated: 2023/02/08 15:26:38 by nsion            ###   ########.fr       */
+/*   Updated: 2023/02/08 15:51:56 by nsion            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ char	**ft_split(char const *s, char c)
 	{
 		while (c == s[i] && s[i])
 			i++;
-		if(c != s[i] && s[i])
+		if (c != s[i] && s[i])
 		{
 			str[y] = ft_substr(s, i, get_next_word(s, c));
 			y++;
@@ -72,7 +72,7 @@ char	**ft_split(char const *s, char c)
 	str[y] = 0;
 	return (str);
 }
-
+/*
 int main(void)
 {
 	char s[] = "hello yellow";
@@ -83,4 +83,4 @@ int main(void)
 	while (i < 2)
 		printf("%s\n", test[i++]);
 	return (0);
-}
+}*/
