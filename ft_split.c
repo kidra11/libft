@@ -6,7 +6,7 @@
 /*   By: nsion <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 17:05:17 by nsion             #+#    #+#             */
-/*   Updated: 2023/02/07 19:48:01 by nsion            ###   ########.fr       */
+/*   Updated: 2023/02/08 15:26:38 by nsion            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,22 @@ int	count_word(char const *s, char c)
 				i++;
 		}
 	}
-	printf("%d\n", k);
 	return (k);
+}
+
+size_t	get_next_word(char const *s, char c)
+{
+	size_t	t;
+
+	t = 0;
+	while (s[t])
+	{
+		while (c == s[t] && s[t])
+			t++;
+		if (c != s[t] && s[t])
+			return (t);
+	}		
+	return (t);
 }
 
 char	**ft_split(char const *s, char c)
@@ -39,11 +53,9 @@ char	**ft_split(char const *s, char c)
 	char	**str;
 	int		i;
 	int		y;
-	int		t;
 
 	i = 0;
 	y = 0;
-	t = 0;
 	str = malloc((count_word(s, c) + 1) * sizeof(char));
 	if (str == 0)
 		return (0);
@@ -51,13 +63,10 @@ char	**ft_split(char const *s, char c)
 	{
 		while (c == s[i] && s[i])
 			i++;
-		if (s[i])
+		if(c != s[i] && s[i])
 		{
-			while (c != s[i] && s[i])
-				str[y][t++] = s[i++];
-			str[y][t] = 0;
+			str[y] = ft_substr(s, i, get_next_word(s, c));
 			y++;
-			t = 0;
 		}
 	}
 	str[y] = 0;
