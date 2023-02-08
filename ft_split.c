@@ -6,7 +6,7 @@
 /*   By: nsion <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 17:05:17 by nsion             #+#    #+#             */
-/*   Updated: 2023/02/08 15:51:56 by nsion            ###   ########.fr       */
+/*   Updated: 2023/02/08 18:49:24 by nsion            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,18 +33,13 @@ int	count_word(char const *s, char c)
 	return (k);
 }
 
-size_t	get_next_word(char const *s, char c)
+int	get_next_word(char const *s, int i, char c)
 {
-	size_t	t;
+	int	t;
 
-	t = 0;
-	while (s[t])
-	{
-		while (c == s[t] && s[t])
-			t++;
-		if (c != s[t] && s[t])
-			return (t);
-	}		
+	t = i;
+	while (c != s[t] && s[t])
+		t++;
 	return (t);
 }
 
@@ -65,7 +60,8 @@ char	**ft_split(char const *s, char c)
 			i++;
 		if (c != s[i] && s[i])
 		{
-			str[y] = ft_substr(s, i, get_next_word(s, c));
+			str[y] = ft_substr(s, i,(size_t)get_next_word(s, i, c));
+			i = get_next_word(s, i, c);
 			y++;
 		}
 	}
