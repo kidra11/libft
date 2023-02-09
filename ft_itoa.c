@@ -6,7 +6,7 @@
 /*   By: nsion <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 15:53:11 by nsion             #+#    #+#             */
-/*   Updated: 2023/02/09 18:16:22 by nsion            ###   ########.fr       */
+/*   Updated: 2023/02/09 22:31:03 by nsion            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static int	size_int(int n)
 		k++;
 		n = n * -1;
 	}
-	while (n > 0)
+	while (n >= 10)
 	{
 		n = n / 10;
 		k++;
@@ -49,7 +49,6 @@ static char	*reverse(int rem, int i, char *str)
 		start++;
 		end--;
 	}
-	printf("%s\n", str);
 	return (str);
 }
 
@@ -65,8 +64,6 @@ char	*ft_itoa(int n)
 	str = (char *)malloc((size_int(n) + 1) * sizeof(char));
 	if (str == 0)
 		return (NULL);
-	if (n == 0)
-		return (str = "0\0");
 	else if (n < 0)
 	{
 		if (n == -2147483648)
@@ -74,25 +71,23 @@ char	*ft_itoa(int n)
 		str[i++] = '-';
 		n = -n;
 	}
-	cal = n % 10;
-	while (n != 0)
+	while (n != 0 || i == 0)
 	{
+		cal = n % 10;
 		str[i++] = cal + '0';
 		n = n / 10;
-		cal = n % 10;
 	}
 	str[i] = '\0';
-	reverse(rem, i, str);
-	return (str);
+	return (reverse(rem, i, str));
 }
 /*
 int	main(void)
 {
-	int n;
+	int	n;
 
 	n = 0;
 	printf("%s\n", ft_itoa(n));
-	n = 2147483647;
+	n = -2147483648;
 	printf("%s\n", ft_itoa(n));
 	return (0);
 }*/
