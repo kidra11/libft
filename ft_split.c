@@ -6,13 +6,13 @@
 /*   By: nsion <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 17:05:17 by nsion             #+#    #+#             */
-/*   Updated: 2023/02/09 16:37:18 by nsion            ###   ########.fr       */
+/*   Updated: 2023/02/09 22:44:07 by nsion            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	count_word(char const *s, char c)
+static int	count_word(char const *s, char c)
 {
 	int	k;
 	int	i;
@@ -33,7 +33,7 @@ int	count_word(char const *s, char c)
 	return (k);
 }
 
-int	get_next_word(char const *s, int i, char c)
+static int	get_next_word(char const *s, int i, char c)
 {
 	int	t;
 

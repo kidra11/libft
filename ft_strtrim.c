@@ -6,13 +6,13 @@
 /*   By: nsion <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 12:11:09 by nsion             #+#    #+#             */
-/*   Updated: 2023/02/07 17:44:11 by nsion            ###   ########.fr       */
+/*   Updated: 2023/02/09 22:44:30 by nsion            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	is_set(char s, char const set)
+static int	is_set(char s, char const set)
 {
 	int	i;
 
