@@ -6,7 +6,7 @@
 /*   By: nsion <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 17:05:17 by nsion             #+#    #+#             */
-/*   Updated: 2023/02/08 18:49:24 by nsion            ###   ########.fr       */
+/*   Updated: 2023/02/09 16:37:18 by nsion            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ char	**ft_split(char const *s, char c)
 			i++;
 		if (c != s[i] && s[i])
 		{
-			str[y] = ft_substr(s, i,(size_t)get_next_word(s, i, c));
+			str[y] = ft_substr(s, i, (size_t)get_next_word(s, i, c));
 			i = get_next_word(s, i, c);
 			y++;
 		}
