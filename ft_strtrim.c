@@ -6,20 +6,20 @@
 /*   By: nsion <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 12:11:09 by nsion             #+#    #+#             */
-/*   Updated: 2023/02/09 22:44:30 by nsion            ###   ########.fr       */
+/*   Updated: 2023/02/10 19:44:12 by nsion            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	is_set(char s, char const set)
+static int	is_set(char s, char const *set)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (set[i])
 	{
-		if (s == set[i])
+		if (s == ((char *)set)[i])
 			return (1);
 		i++;
 	}
@@ -28,22 +28,22 @@ static int	is_set(char s, char const set)
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	char	*str;
-	int		i;
-	int		l;
-	int		k;
+	char		*str;
+	size_t		i;
+	size_t		l;
+	size_t		k;
 
-	i = ft_strlen(s1);
-	while (is_set(s[i], set) && i > 0)
-		i--;
 	l = 0;
-	while (is_set(s[l], set) && s[l])
+	while (is_set(s1[l], set) && s1[l])
 		l++;
-	str = malloc((i - l + 1) * sizeof(char));
+	i = ft_strlen(s1);
+	while (is_set(s1[i - 1], set) && i > l)
+		i--;
+	str = (char *)malloc((i - l + 1) * sizeof(char));
 	if (str == 0)
 		return (NULL);
 	k = 0;
-	while (s1[l] && l <= i)
+	while (s1[l] && l < i)
 		str[k++] = s1[l++];
 	str[l] = '\0';
 	return (str);
