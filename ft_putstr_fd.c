@@ -6,7 +6,7 @@
 /*   By: nsion <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/10 00:04:18 by nsion             #+#    #+#             */
-/*   Updated: 2023/02/10 00:12:19 by nsion            ###   ########.fr       */
+/*   Updated: 2023/02/12 14:47:49 by nsion            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_putstr_fd(char *s, int fd)
 	i = 0;
 	while (s[i])
 	{
-		ft_putchar(s[i], fd)
+		ft_putchar_fd(s[i], fd);
 		i++;
 	}
 }
