@@ -6,7 +6,7 @@
 /*   By: nsion <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 15:53:11 by nsion             #+#    #+#             */
-/*   Updated: 2023/02/09 22:31:03 by nsion            ###   ########.fr       */
+/*   Updated: 2023/02/13 16:13:42 by nsion            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ static int	size_int(int n)
 	k = 1;
 	if (n < 0)
 	{
+		if (n == -2147483648)
+			return (11);
 		k++;
 		n = n * -1;
 	}
@@ -61,13 +63,13 @@ char	*ft_itoa(int n)
 
 	i = 0;
 	rem = n;
+	if (n == -2147483648)
+		return (ft_strdup("-2147483648"));
 	str = (char *)malloc((size_int(n) + 1) * sizeof(char));
 	if (str == 0)
 		return (NULL);
-	else if (n < 0)
+	if (n < 0)
 	{
-		if (n == -2147483648)
-			return (str = "-2147483648\0");
 		str[i++] = '-';
 		n = -n;
 	}
@@ -80,13 +82,12 @@ char	*ft_itoa(int n)
 	str[i] = '\0';
 	return (reverse(rem, i, str));
 }
+
 /*
 int	main(void)
 {
 	int	n;
 
-	n = 0;
-	printf("%s\n", ft_itoa(n));
 	n = -2147483648;
 	printf("%s\n", ft_itoa(n));
 	return (0);

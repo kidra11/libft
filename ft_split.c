@@ -6,7 +6,7 @@
 /*   By: nsion <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 17:05:17 by nsion             #+#    #+#             */
-/*   Updated: 2023/02/13 13:47:34 by nsion            ###   ########.fr       */
+/*   Updated: 2023/02/13 16:45:13 by nsion            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,11 +36,16 @@ static int	count_word(char const *s, char c)
 static int	get_next_word(char const *s, int i, char c)
 {
 	int	t;
+	int	p;
 
 	t = i;
+	p = 0;
 	while (c != s[t] && s[t])
 		t++;
-	return (t);
+	p = t - i;
+	if (!p)
+		return (t);
+	return (p);
 }
 
 char	**ft_split(char const *s, char c)
@@ -68,7 +73,7 @@ char	**ft_split(char const *s, char c)
 	str[y] = 0;
 	return (str);
 }
-/*
+
 int main(void)
 {
 	char s[] = "hello yellow";
@@ -79,4 +84,4 @@ int main(void)
 	while (i < 2)
 		printf("%s\n", test[i++]);
 	return (0);
-}*/
+}
