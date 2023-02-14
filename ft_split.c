@@ -6,7 +6,7 @@
 /*   By: nsion <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 17:05:17 by nsion             #+#    #+#             */
-/*   Updated: 2023/02/14 12:42:22 by nsion            ###   ########.fr       */
+/*   Updated: 2023/02/14 13:22:47 by nsion            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,8 @@ char	**ft_split(char const *s, char c)
 
 	i = 0;
 	y = 0;
+	if (!s)
+		return (NULL);
 	str = (char **)malloc((count_word(s, c) + 1) * sizeof(char *));
 	if (str == 0)
 		return (0);
