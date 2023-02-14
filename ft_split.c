@@ -6,7 +6,7 @@
 /*   By: nsion <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 17:05:17 by nsion             #+#    #+#             */
-/*   Updated: 2023/02/14 13:22:47 by nsion            ###   ########.fr       */
+/*   Updated: 2023/02/14 13:29:29 by nsion            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,6 @@ char	**ft_split(char const *s, char c)
 		return (0);
 	while (s[i])
 	{
-		printf("i : %d\n", i);
 		while (c == s[i] && s[i])
 			i++;
 		if (c != s[i] && s[i])
