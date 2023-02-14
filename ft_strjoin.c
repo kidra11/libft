@@ -6,7 +6,7 @@
 /*   By: nsion <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 17:53:51 by nsion             #+#    #+#             */
-/*   Updated: 2023/02/14 14:12:32 by nsion            ###   ########.fr       */
+/*   Updated: 2023/02/14 14:23:35 by nsion            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,9 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	l = ft_strlen(s1);
 	k = ft_strlen(s2);
 	if (!s1)
-		return ((char *)s1);
-	if (!s2)
 		return ((char *)s2);
+	if (!s2)
+		return ((char *)s1);
 	str = (char *)malloc((l + k + 1) * sizeof(char));
 	if (str == 0)
 		return (NULL);
