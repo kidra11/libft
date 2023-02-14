@@ -6,7 +6,7 @@
 /*   By: nsion <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 19:48:11 by nsion             #+#    #+#             */
-/*   Updated: 2023/02/12 15:49:13 by nsion            ###   ########.fr       */
+/*   Updated: 2023/02/14 12:45:21 by nsion            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,11 @@
 # include <unistd.h>
 # include <string.h>
 
-typedef struct	s_list
+typedef struct s_list
 {
 	void		*content;
 	struct s_list	*next;
-}	t_list;
+}			t_list;
 
 int		ft_isalpha(int c);
 
