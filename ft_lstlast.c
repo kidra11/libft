@@ -6,7 +6,7 @@
 /*   By: nsion <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/14 17:01:05 by nsion             #+#    #+#             */
-/*   Updated: 2023/02/14 17:06:14 by nsion            ###   ########.fr       */
+/*   Updated: 2023/02/15 15:21:56 by nsion            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 t_list	*ft_lstlast(t_list *lst)
 {
+	if (!lst)
+		return (NULL);
 	while (lst->next != 0)
 		lst = lst->next;
 	return (lst);
