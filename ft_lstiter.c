@@ -6,7 +6,7 @@
 /*   By: nsion <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 10:08:49 by nsion             #+#    #+#             */
-/*   Updated: 2023/02/16 10:18:38 by nsion            ###   ########.fr       */
+/*   Updated: 2023/02/16 11:23:06 by nsion            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	if (!lst)
 		return ;
-	while (lst->next != 0)
+	while (lst)
 	{
 		f(lst->content);
 		lst = lst->next;
