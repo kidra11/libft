@@ -6,7 +6,7 @@
 #    By: nsion <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/01 19:23:02 by nsion             #+#    #+#              #
-#    Updated: 2023/02/16 10:42:28 by nsion            ###   ########.fr        #
+#    Updated: 2023/02/17 12:08:24 by nsion            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,5 +45,9 @@ fclean	:	clean
 
 
 re	: fclean all
+
+so:
+	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS) $(BONUS_SRCS)
+	gcc -nostartfiles -shared -o libft.so $(OBJS) $(BONUS_OBJS)
 
 .PHONY: all bonus clean fclean re

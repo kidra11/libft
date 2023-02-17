@@ -6,7 +6,7 @@
 /*   By: nsion <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/14 17:25:15 by nsion             #+#    #+#             */
-/*   Updated: 2023/02/16 11:20:56 by nsion            ###   ########.fr       */
+/*   Updated: 2023/02/17 12:40:00 by nsion            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*temp;
 
-	if (!*lst)
+	if (!lst)
 		return ;
-	while (*lst)
+	while (*lst != 0)
 	{
 		temp = (*lst)->next;
 		ft_lstdelone((*lst), del);

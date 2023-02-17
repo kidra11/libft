@@ -6,7 +6,7 @@
 /*   By: nsion <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 12:11:09 by nsion             #+#    #+#             */
-/*   Updated: 2023/02/12 14:47:04 by nsion            ###   ########.fr       */
+/*   Updated: 2023/02/17 12:13:54 by nsion            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t		l;
 	size_t		k;
 
+	if (!s1 || !set)
+		return (NULL);
 	l = 0;
 	while (is_set(s1[l], set) && s1[l])
 		l++;
